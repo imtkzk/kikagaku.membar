@@ -1,0 +1,229 @@
+// main: ../style.scss
+
+/*  culture
+------------------------------------------------------------------------------*/
+
+.sec--culture {
+  padding: vw-sp(60) 0 0 0;
+  background-color: #f8f8f8;
+}
+
+.sec--culture::before {
+  content: '';
+  position: absolute;
+  bottom: vw-sp(10);
+  left: 0;
+  width: 100%;
+  height: vw-sp(1000);
+  background-image: url(../img/culture/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .sec--culture {
+    padding: vw-pc(50) 0 0 0;
+  }
+
+  .sec--culture::before {
+    bottom: vw-pc(10);
+    width: vw-pc(1500);
+    height: vw-pc(420);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .sec--culture {
+    padding: 50px 0 0 0;
+  }
+
+  .sec--culture::before {
+    bottom: 10px;
+    height: 420px;
+  }
+}
+
+
+
+.culture {
+  position: relative;
+  padding: vw-sp(50) 0;
+}
+
+.culture-image {
+  position: relative;
+  margin-bottom: vw-sp(40);
+  z-index: 2;
+  img {
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.culture-btn {
+  margin: vw-sp(35) 0 0 0;
+  width: vw-sp(460);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .culture {
+    display: flex;
+    justify-content: space-between;
+    padding: vw-pc(50) 0;
+    height: vw-pc(420);
+  }
+
+  .culture-image {
+    top: vw-pc(-85);
+    margin-bottom: vw-pc(-85);
+    width: vw-pc(600);
+    order: 2;
+  }
+
+  .culture-content {
+    width: vw-pc(600);
+    order: 1;
+  }
+
+  .culture-btn {
+    margin: vw-pc(20) 0 0 0;
+    width: vw-pc(240);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .culture {
+    padding: 50px 0;
+    height: 420px;
+  }
+
+  .culture-image {
+    top: -85px;
+    margin-bottom: -85px;
+    width: 600px;
+  }
+
+  .culture-content {
+    width: 600px;
+  }
+
+  .culture-btn {
+    margin: 20px 0 0 0;
+    width: 240px;
+  }
+}
+
+
+/*  culture + work common
+------------------------------------------------------------------------------*/
+
+.square-box {
+  position: relative;
+  margin: 0 auto;
+  padding: vw-sp(80) 0 0 vw-sp(65);
+  width: vw-sp(600);
+  height: vw-sp(450);
+  p {
+    color: $color-base;
+    font-size: vw-sp(30);
+    font-weight: 700;
+    line-height: 2em;
+  }
+}
+
+.square-box.is-move {
+  background-image:
+  linear-gradient(00deg, #fff, #fff),
+  linear-gradient(00deg, #fff, #fff),
+  linear-gradient(00deg, #fff, #fff),
+  linear-gradient(00deg, #fff, #fff);
+  background-repeat: no-repeat;
+  background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+  background-position: left bottom, left top, right top, right bottom;
+  animation: square_anim 2s linear forwards;
+}
+
+.square-box:before {
+  content: '';
+  position: absolute;
+  top: vw-sp(110);
+  left: vw-sp(-60);
+  width: vw-sp(100);
+  height: 1px;
+  background-color: $color-base;
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .square-box {
+    margin: 0;
+    padding: vw-pc(50) 0 0 vw-pc(85);
+    width: vw-pc(440);
+    height: vw-pc(300);
+    p {
+      font-size: vw-pc(20);
+    }
+  }
+
+  .work-content .square-box {
+    margin-left: auto;
+  }
+
+  .square-box:before {
+    top: vw-pc(65);
+    left: vw-pc(-270);
+    width: vw-pc(340);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .square-box {
+    padding: 50px 0 0 85px;
+    width: 440px;
+    height: 300px;
+    p {
+      font-size: 20px; font-size: 2.0rem;
+    }
+  }
+
+  .square-box:before {
+    top: 70px;
+    left: -270px;
+    width: 340px;
+  }
+}
+
+
+@keyframes square_anim {
+
+  0%{
+    background-size:
+    1px 0, 0 1px,
+    1px 0, 0 1px;
+  }
+  25%{
+    background-size:
+    1px 100%, 0 1px,
+    1px 0, 0 1px;
+  }
+  50%{
+    background-size:
+    1px 100%, 100% 1px,
+    1px 0, 0 1px;
+  }
+  75%{
+    background-size:
+    1px 100%, 100% 1px,
+    1px 100%, 0 1px;
+  }
+  100%{
+    background-size:
+    1px 100%, 100% 1px,
+    1px 100%, 100% 1px;
+  }
+}

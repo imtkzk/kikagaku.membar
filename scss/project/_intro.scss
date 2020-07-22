@@ -1,0 +1,74 @@
+// main: ../style.scss
+
+/*  intro
+------------------------------------------------------------------------------*/
+
+.sec--intro {
+  padding: vw-sp(60) 0 vw-sp(130) 0;
+  background-image: url(../img/intro/bg.jpg);
+  background-size: cover;
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .sec--intro {
+    padding: vw-pc(60) 0 vw-pc(95) 0;
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .sec--intro {
+    padding: 60px 0 95px 0;
+  }
+}
+
+.intro {
+  padding: vw-sp(55) 0;
+  background-image: url(../img/intro/logo.png);
+  background-position: center;
+  background-size: vw-sp(500) vw-sp(494);
+  p {
+    font-size: vw-sp(28);
+    font-weight: 600;
+    text-align: center;
+    line-height: 2.1em;
+  }
+}
+
+.intro-btn {
+  margin: vw-sp(25) auto 0 auto;
+  width: vw-sp(620);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .intro {
+    padding: vw-pc(45) 0;
+    background-size: vw-pc(269) vw-pc(266);
+    p {
+      font-size: vw-pc(18);
+    }
+  }
+
+  .intro-btn {
+    margin: vw-pc(15) auto 0 auto;
+    width: vw-pc(380);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .intro {
+    padding: 45px 0;
+    background-size: 269px 266px;
+    p {
+      font-size: 18px; font-size: 1.8rem;
+    }
+  }
+
+  .intro-btn {
+    margin: 15px auto 0 auto;
+    width: 380px;
+  }
+}

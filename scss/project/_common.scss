@@ -1,0 +1,40 @@
+// main: ../style.scss
+
+/*  common
+------------------------------------------------------------------------------*/
+
+/* ---------------------------------- ホバー画像拡大 */
+
+.img__scale {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.img__scale img {
+  width: 100%;
+  transition-duration: 0.5s;
+}
+
+.img__scale__hover {
+  transform: scale(1.1,1.1);
+  cursor: pointer;
+}
+
+.hover__container a:hover .img__scale img,
+.hover__container > div:hover .img__scale img {
+  @extend .img__scale__hover;
+}
+
+
+/* ---------------------------------- リスト */
+
+.list li {
+  padding-left: 1em;
+  text-indent: -1em;
+  line-height: 1.8em;
+}
+
+.list--dot li:before {
+  content: '・';
+}

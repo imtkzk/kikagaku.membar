@@ -1,0 +1,62 @@
+// main: ../style.scss
+
+/*  UTILIS
+------------------------------------------------------------------------------*/
+
+/*  P
+-------------------------------------------------------*/
+
+.text {
+	line-height: 1.8em;
+}
+
+.normal {font-weight: 400 !important;}
+.bold {font-weight: 700;}
+
+/*  配置
+-------------------------------------------------------*/
+
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }
+
+@media screen and (max-width: $breakpoint1-max) {
+	.none__sp { display: none  !important; }
+	.br__pc { display: inline; }
+	.br__sp { display: block; }
+  .br--pc { display: none;}
+}
+
+@media screen and (min-width: $breakpoint1) {
+	.none__pc { display: none  !important;}
+	.br__pc { display: block; }
+	.br__sp { display: inline; }
+  .br--sp { display: none;}
+}
+
+
+/* ---------------------------------- 文字数 */
+
+.ellipsis {
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/*  画像
+-------------------------------------------------------*/
+
+.img__fit {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto;
+}

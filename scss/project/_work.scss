@@ -1,0 +1,114 @@
+// main: ../style.scss
+
+/*  work
+------------------------------------------------------------------------------*/
+
+.sec--work {
+  padding: vw-sp(60) 0 0 0;
+  background-color: #f8f8f8;
+}
+
+.sec--work::before {
+  content: '';
+  position: absolute;
+  bottom: vw-sp(10);
+  right: 0;
+  width: 100%;
+  height: vw-sp(1000);
+  background-image: url(../img/work/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .sec--work {
+    padding: vw-pc(50) 0 0 0;
+  }
+
+  .sec--work::before {
+    bottom: vw-pc(10);
+    width: vw-pc(1500);
+    height: vw-pc(420);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .sec--work {
+    padding: 50px 0 0 0;
+  }
+
+  .sec--work::before {
+    bottom: 10px;
+    height: 420px;
+  }
+}
+
+.work {
+  position: relative;
+  padding: vw-sp(50) 0;
+}
+
+.work-image {
+  position: relative;
+  margin-bottom: vw-sp(40);
+  z-index: 2;
+  img {
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.work-btn {
+  margin: vw-sp(35) 0 0 0;
+  width: vw-sp(460);
+}
+
+@media screen and (min-width: $breakpoint1) {
+
+  .work {
+    display: flex;
+    justify-content: space-between;
+    padding: vw-pc(50) 0;
+    height: vw-pc(420);
+  }
+
+  .work-image {
+    top: vw-pc(-85);
+    margin-bottom: vw-pc(-85);
+    width: vw-pc(600);
+  }
+
+  .work-content {
+    width: vw-pc(600);
+  }
+
+  .work-btn {
+    margin: vw-pc(20) 0 0 0;
+    width: vw-pc(240);
+  }
+}
+
+@media screen and (min-width: $breakpoint2) {
+
+  .work {
+    padding: 50px 0;
+    height: 420px;
+  }
+
+  .work-image {
+    top: -85px;
+    margin-bottom: -85px;
+    width: 600px;
+  }
+
+  .work-content {
+    width: 600px;
+  }
+
+  .work-btn {
+    margin: 20px 0 0 0;
+    width: 240px;
+  }
+}
